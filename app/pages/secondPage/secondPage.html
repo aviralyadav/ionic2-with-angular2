@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+  <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Second Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="secondPage" padding>
+<ion-list>
+    <button ion-item *ngFor="let item of posts" (click)="itemTapped($event, item)">
+      <ion-icon [name]="item.icon" item-left></ion-icon>
+      {{item.kind}}
+      <div class="item-note" item-right>
+        {{item.kind}}
+      </div>
+    </button>
+  </ion-list>
+</ion-content>
